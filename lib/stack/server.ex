@@ -1,6 +1,8 @@
 defmodule Stack.Server do
   use GenServer
 
+  @vsn "0"
+
   #####
   # 外部 API
   def start_link(_) do
