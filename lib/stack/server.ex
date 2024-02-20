@@ -10,7 +10,9 @@ defmodule Stack.Server do
   end
 
   def pop do
-    GenServer.call __MODULE__, :pop
+    # GenServer.call __MODULE__, :pop
+    with value = GenServer.call(__MODULE__, :pop),
+    do: "pop value is #{value}"
   end
 
   def push(delta) do
